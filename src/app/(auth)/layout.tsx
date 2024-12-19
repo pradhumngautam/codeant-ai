@@ -4,7 +4,7 @@ const AuthLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="w-screen h-screen fixed grid grid-cols-1 lg:grid-cols-2">
       {/* Static Images */}
-      <div className="w-full h-full hidden lg:flex items-center justify-center border-r border-[#D8DAE5]">
+      <div className="w-full h-full hidden lg:flex items-center justify-center border-r border-[#D8DAE5] bg-[#FFFFFF]">
         <Image
           src={"/codeant.svg"}
           alt="codeant"
