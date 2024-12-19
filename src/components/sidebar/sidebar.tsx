@@ -4,8 +4,8 @@ import SidebarRoutes from "./sidebar-routes";
 
 const Sidebar = () => {
   return (
-    <div className="h-full border-r border-[#E9EAEB] bg-[#FFFFFF] flex flex-col overflow-y-auto">
-      <div className="p-6">
+    <div className="h-full border-r border-[#E9EAEB] bg-[#FFFFFF] flex flex-col overflow-y-auto py-6">
+      <div className="px-6 pb-6">
         <Image
           src={"/codeant-logo.png"}
           alt="card"
@@ -15,7 +15,7 @@ const Sidebar = () => {
         />
       </div>
 
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col w-full h-full">
         <SidebarRoutes />
       </div>
     </div>

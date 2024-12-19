@@ -26,7 +26,7 @@ const SidebarItem = ({
       variant={"sidebar"}
       size={"routes"}
       className={cn(
-        "flex items-center justify-start h-full gap-x-2 px-3 py-2 border-2 border-transparent",
+        "flex items-center justify-start gap-x-2 px-3 border-2 border-transparent",
         active == label &&
           "bg-[#1570EF] text-[#FFFFFF] hover:bg-[#1570EF] border-2 border-blue-500/60"
       )}

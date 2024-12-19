@@ -29,7 +29,7 @@ const buttonVariants = cva(
         sm: "h-8 rounded-md px-3 text-xs",
         lg: "h-10 rounded-md px-8",
         login: "h-[58px]",
-        routes: "h-[48px] rounded-md",
+        routes: "h-[44px] rounded-md",
         icon: "h-9 w-9",
       },
     },
