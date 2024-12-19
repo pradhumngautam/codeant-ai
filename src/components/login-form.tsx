@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 import { Button } from "./ui/button";
@@ -5,21 +6,30 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const LoginForm = () => {
   return (
-    <div className="border border-[#E9EAEB] rounded-xl bg-[#FFFFFF] w-full lg:w-[672px] h-[602px]">
+    <div className="border border-[#E9EAEB] rounded-xl bg-[#FFFFFF] w-full lg:w-[672px] lg:h-[602px]">
       <Tabs defaultValue="saas">
         <div className="px-5 py-9 flex flex-col items-center justify-center text-center gap-5 border-b border-[#D5D7DA]">
-          <div>CodeAnt AI</div>
+          <Image
+            src={"/codeant-logo.png"}
+            alt="card"
+            width={201}
+            height={40}
+            className=""
+          />
 
           <div className="text-[32px] font-semibold">Welcome to CodeAnt AI</div>
 
-          <TabsList className="w-full lg:w-[624px] h-[60px] p-0 border text-[20px]">
-            <TabsTrigger value="saas" className="w-full h-full font-semibold">
+          <TabsList className="w-full lg:w-[624px] h-[60px] p-0 border">
+            <TabsTrigger
+              value="saas"
+              className="w-full h-full text-[20px] font-semibold"
+            >
               SAAS
             </TabsTrigger>
 
             <TabsTrigger
               value="selfHosted"
-              className="w-full h-full font-semibold"
+              className="w-full h-full text-[20px] font-semibold"
             >
               Self Hosted
             </TabsTrigger>
