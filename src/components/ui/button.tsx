@@ -21,12 +21,15 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         native:
           "w-full bg-[#FFFFFF] border border-[#D8DAE5] text-[16px] font-semibold text-[#171717] hover:border-zinc-400 hover:bg-zinc-50 transition-all duration-150",
+        sidebar:
+          "w-full bg-[#FFFFFF] text-[16px] font-semibold text-[#414651] hover:bg-zinc-100/80 transition-all duration-150",
       },
       size: {
         default: "h-9 px-4 py-2",
         sm: "h-8 rounded-md px-3 text-xs",
         lg: "h-10 rounded-md px-8",
         login: "h-[58px]",
+        routes: "h-[48px] rounded-md",
         icon: "h-9 w-9",
       },
     },

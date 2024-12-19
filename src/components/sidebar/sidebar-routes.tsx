@@ -1,48 +1,48 @@
 "use client";
 
-import { BarChart, Compass, Layout, List } from "lucide-react";
-import { usePathname } from "next/navigation";
+import { useState } from "react";
+import { BookText, Cloud, CodeXml, Home, Settings } from "lucide-react";
 
 import SidebarItem from "./sidebar-item";
 
-const guestRoutes = [
+const routes = [
   {
-    icon: Layout,
-    label: "Dashboard",
-    href: "/",
+    icon: Home,
+    label: "Repositories",
+    href: "#",
   },
   {
-    icon: Compass,
-    label: "Browse",
-    href: "/search",
-  },
-];
-
-const teacherRoutes = [
-  {
-    icon: List,
-    label: "Courses",
-    href: "/teacher/courses",
+    icon: CodeXml,
+    label: "AI Code Review",
+    href: "#",
   },
   {
-    icon: BarChart,
-    label: "Analytics",
-    href: "/teacher/analytics",
+    icon: Cloud,
+    label: "Cloud Security",
+    href: "#",
+  },
+  {
+    icon: BookText,
+    label: "How to Use",
+    href: "#",
+  },
+  {
+    icon: Settings,
+    label: "Settings",
+    href: "#",
   },
 ];
 
 const SidebarRoutes = () => {
-  const pathname = usePathname();
-
-  const isTeacherPage = pathname?.includes("/teacher");
-
-  const routes = isTeacherPage ? teacherRoutes : guestRoutes;
+  const [active, setActive] = useState<string>("Repositories");
 
   return (
-    <div className="flex flex-col w-full">
-      {routes.map((route) => (
+    <div className="flex flex-col w-full px-4 gap-1">
+      {routes.map((route, index) => (
         <SidebarItem
-          key={route.href}
+          key={index}
+          active={active}
+          setActive={setActive}
           label={route.label}
           icon={route.icon}
           href={route.href}
