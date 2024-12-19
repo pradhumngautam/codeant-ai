@@ -88,7 +88,12 @@ const RepositoiresList = () => {
       {/* Repositories Row */}
       <div className="flex flex-col">
         {repositoriesList.map((repository, index) => (
-          <RepositoryRow {...repository} key={index} />
+          <RepositoryRow
+            {...repository}
+            key={index}
+            index={index}
+            maxLength={repositoriesList.length}
+          />
         ))}
       </div>
     </div>

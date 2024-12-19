@@ -1,12 +1,18 @@
 import { Database } from "lucide-react";
 
+import { cn } from "@/lib/utils";
+
 const RepositoryRow = ({
+  index,
+  maxLength,
   title,
   visibility,
   techStack,
   size,
   updatedAt,
 }: {
+  index: number;
+  maxLength: number;
   title: string;
   visibility: string;
   techStack: string;
@@ -14,7 +20,12 @@ const RepositoryRow = ({
   updatedAt: string;
 }) => {
   return (
-    <div className="p-4 lg:p-6 border-t flex items-center justify-start">
+    <div
+      className={cn(
+        "p-4 lg:p-6 border-t border-[#D5D7DA] flex items-center justify-start hover:bg-[#F5F5F5] hover:cursor-pointer transition-all duration-200",
+        index == maxLength - 1 && "rounded-b-xl"
+      )}
+    >
       <div className="flex flex-col items-start gap-3">
         <div className="flex items-center gap-2">
           <h2 className="text-[18px] lg:text-[20px] font-medium text-[#181D27]">
