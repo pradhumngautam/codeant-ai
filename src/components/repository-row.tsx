@@ -25,8 +25,8 @@ const RepositoryRow = ({
 
         <div className="flex items-center gap-10">
           <div>
-            {techStack}{" "}
-            <span className="h-2 w-2 inline-flex rounded-full bg-[#1570EF]"></span>
+            {techStack}
+            <span className="ml-2 h-2 w-2 inline-flex rounded-full bg-[#1570EF]" />
           </div>
 
           <div className="flex items-center gap-1">
