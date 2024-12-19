@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} bg-[#FAFAFA] antialiased`}>
+      <body className={`${inter.className} lg:bg-[#FAFAFA] antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"

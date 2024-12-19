@@ -59,10 +59,10 @@ const repositoriesList = [
 
 const RepositoiresList = () => {
   return (
-    <div className="h-full w-full bg-[#FFFFFF] border border-[#E9EAEB] rounded-xl flex flex-col">
+    <div className="h-full w-full bg-[#FFFFFF] lg:border lg:border-[#E9EAEB] lg:rounded-xl flex flex-col">
       {/* Header with info buttons */}
-      <div className="px-6 py-5 flex flex-col items-start justify-center w-full gap-4">
-        <div className="flex flex-col lg:flex-row items-center justify-between w-full gap-3">
+      <div className="px-4 lg:px-6 py-5 flex flex-col items-start justify-center w-full gap-4">
+        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between w-full gap-3">
           <div>
             <h1 className="text-2xl font-semibold text-[#181D27]">
               Repositories

@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import SidebarRoutes from "./sidebar-routes";
+import UserDropdown from "../user-dropdown";
 
 const Sidebar = () => {
   return (
@@ -15,7 +16,9 @@ const Sidebar = () => {
         />
       </div>
 
-      <div className="flex flex-col w-full h-full">
+      <div className="flex flex-col gap-4 w-full h-full">
+        <UserDropdown />
+
         <SidebarRoutes />
       </div>
     </div>

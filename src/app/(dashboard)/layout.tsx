@@ -8,7 +8,7 @@ const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
       </div>
 
       <div className="bg-[#FAFAFA] md:pl-[242px] h-full w-full">
-        <div className="p-6 h-full lg:max-w-screen-xl lg:mx-auto w-full">
+        <div className="lg:p-6 h-full lg:max-w-screen-xl lg:mx-auto w-full">
           {children}
         </div>
       </div>

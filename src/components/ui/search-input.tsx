@@ -21,10 +21,10 @@ const SearchInput = () => {
   }, [inputValue]);
 
   return (
-    <div className="space-y-2">
+    <div className="w-full space-y-2">
       <div className="relative">
         <Input
-          className="peer ps-10 w-[366px] h-[44px] border-[#D5D7DA] rounded-lg"
+          className="peer ps-10 w-full lg:w-[366px] lg:h-[44px] border-[#D5D7DA] rounded-lg"
           placeholder="Search Repositories"
           type="search"
           value={inputValue}
