@@ -10,7 +10,7 @@ import {
 
 const UserDropdown = () => {
   return (
-    <div className="px-4">
+    <div>
       <Select>
         <SelectTrigger className="w-full h-[40px]">
           <SelectValue placeholder="UtkarshDhairyaPanwar" />

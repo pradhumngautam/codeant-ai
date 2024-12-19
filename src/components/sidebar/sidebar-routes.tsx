@@ -13,7 +13,7 @@ import {
 
 import SidebarItem from "./sidebar-item";
 
-const routes = [
+export const routes = [
   {
     icon: Home,
     label: "Repositories",
@@ -41,7 +41,7 @@ const routes = [
   },
 ];
 
-const bottomRoutes = [
+export const bottomRoutes = [
   {
     icon: Phone,
     label: "Support",

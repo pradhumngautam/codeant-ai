@@ -17,7 +17,9 @@ const LoginForm = () => {
             className=""
           />
 
-          <div className="text-[32px] font-semibold">Welcome to CodeAnt AI</div>
+          <div className="text-[24px] lg:text-[32px] font-semibold">
+            Welcome to CodeAnt AI
+          </div>
 
           <TabsList className="w-full lg:w-[624px] h-[60px] p-0 border">
             <TabsTrigger
@@ -42,21 +44,29 @@ const LoginForm = () => {
             className="w-full flex flex-col items-center"
           >
             <div className="flex flex-col items-center w-full lg:w-[446px] gap-4">
-              <Button variant={"native"} size={"login"}>
-                <Link href={"/dashboard"}>Sign in with Github</Link>
-              </Button>
+              <LoginButton
+                src={"/github.svg"}
+                alt="gh"
+                title={"Sign in with Github"}
+              />
 
-              <Button variant={"native"} size={"login"}>
-                <Link href={"/dashboard"}>Sign in with Bitbucket</Link>
-              </Button>
+              <LoginButton
+                src={"/bitbucket.svg"}
+                alt="bb"
+                title={"Sign in with Bitbucket"}
+              />
 
-              <Button variant={"native"} size={"login"}>
-                <Link href={"/dashboard"}>Sign in with Azure DevOps</Link>
-              </Button>
+              <LoginButton
+                src={"/azure-devops.svg"}
+                alt="ad"
+                title={"Sign in with Azure DevOps"}
+              />
 
-              <Button variant={"native"} size={"login"}>
-                <Link href={"/dashboard"}>Sign in with Gitlab</Link>
-              </Button>
+              <LoginButton
+                src={"/gitlab.svg"}
+                alt="gl"
+                title={"Sign in with GitLab"}
+              />
             </div>
           </TabsContent>
 
@@ -65,13 +75,17 @@ const LoginForm = () => {
             className="w-full flex flex-col items-center"
           >
             <div className="flex flex-col items-center w-full lg:w-[446px] gap-4">
-              <Button variant={"native"} size={"login"}>
-                <Link href={"/dashboard"}>Self Hosted Gitlab</Link>
-              </Button>
+              <LoginButton
+                src={"/gitlab.svg"}
+                alt="gl"
+                title={"Self Hosted GitLab"}
+              />
 
-              <Button variant={"native"} size={"login"}>
-                <Link href={"/dashboard"}>Sign in with SSO</Link>
-              </Button>
+              <LoginButton
+                src={"/sso.svg"}
+                alt="sso"
+                title={"Sign in with SSO"}
+              />
             </div>
           </TabsContent>
         </div>
@@ -81,3 +95,22 @@ const LoginForm = () => {
 };
 
 export default LoginForm;
+
+const LoginButton = ({
+  src,
+  alt,
+  title,
+}: {
+  src: string;
+  alt: string;
+  title: string;
+}) => {
+  return (
+    <Button variant={"native"} size={"login"}>
+      <Link href={"/dashboard"} className="flex items-center gap-2">
+        <Image src={src} alt={alt} width={25} height={25} />
+        {title}
+      </Link>
+    </Button>
+  );
+};

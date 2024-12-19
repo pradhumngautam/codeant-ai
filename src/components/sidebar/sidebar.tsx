@@ -17,7 +17,9 @@ const Sidebar = () => {
       </div>
 
       <div className="flex flex-col gap-4 w-full h-full">
-        <UserDropdown />
+        <div className="px-4">
+          <UserDropdown />
+        </div>
 
         <SidebarRoutes />
       </div>
