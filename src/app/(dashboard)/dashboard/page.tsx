@@ -1,5 +1,11 @@
+import RepositoiresList from "@/components/repositories";
+
 const DashboardPage = () => {
-  return <div>Repositories</div>;
+  return (
+    <div>
+      <RepositoiresList />
+    </div>
+  );
 };
 
 export default DashboardPage;
